@@ -8,7 +8,7 @@
 - Print out a personalized message using the user's name, age, and location. For example: "Hello [name], you are [age] years old and live in [location]."
 - Save and run the program to see the output.
 
-## Assignment solution
+#### Assignment solution
 code
 ```
 # Use the input() function to ask the user for their name and store it in a variable called "name".
@@ -36,7 +36,7 @@ print(f"Hello {name}, you are {age} years old and live in {location}")
 6. Sort my_list in ascending order.
 7. Find and print the index of the value 30 in my_list.
 
-## Assignment solution
+#### Assignment solution
 ```
 1. # Create an empty list called my_list.
 my_list = [] 
@@ -76,7 +76,7 @@ print(my_list[3])
 - Create a function named calculate_discount(price, discount_percent) that calculates the final price after applying a discount. The function should take the original price (price) and the discount percentage (discount_percent) as parameters. If the discount is 20% or higher, apply the discount; otherwise, return the original price.
 Using the calculate_discount function, prompt the user to enter the original price of an item and the discount percentage. Print the final price after applying the discount, or if no discount was applied, print the original price.
 
-## Assignment Solution
+#### Assignment Solution
 ```
 origanal_price = float(input('Enter the original price of your item: '))
 discount_percent = float(input('Enter the discount percentage: '))
@@ -109,3 +109,34 @@ if __name__ == "__main__":
     main()   
 ```
 
+# Week 4 Assignment
+
+#### Instructions:
+1. File Read & Write Challenge 🖋️: Create a program that reads a file and writes a modified version to a new file.
+2. Error Handling Lab 🧪: Ask the user for a filename and handle errors if it doesn’t exist or can’t be read.
+
+#### Assignment Solution
+```
+def modified_file():
+    input_file = "requirements.txt"
+    output_file = "modified_file"
+
+    try:
+        with open(input_file, "r") as infile:
+            document = infile.read()
+            modified_document = document.upper()
+
+        with open(output_file, "w") as outfile:
+            outfile.write(modified_document)
+            print(f"Modified document written to {output_file}")
+
+    except FileNotFoundError:
+        print(f"Error: File {input_file} not found")
+    except IOError:
+        print(f"Error: Could not read the file")
+    except Exception as e:
+        print(f"An unexcepted error occured: {e}")
+
+
+modified_file()
+```
