@@ -1,4 +1,16 @@
 # PLP-Python-Assignment
+
+## Table of Content
+- [Week 1 Assignment](#week-1-assignment)
+- [Week 2 Assignment](#week-2-assignment)
+- [Week 3 Assignment](#week-3-assignment)
+- [Week 4 Assignment](#week-4-assignment)
+- [Week 5 Assignment](#week-5-assignment)
+- [Week 6 Assignment](#week-6-assignment)
+- [Week 7 Assignment](#week-7-assignment)
+- [Week 8 Assignment](#week-8-assignment)
+
+  
 ## Week 1 Assignment
 #### Instructions:
 - Create a new Python file and name it "user_input.py"
@@ -229,3 +241,167 @@ class bicycle(Vehicle):
 def demonstrate_movement(vehicle):
     vehicle.move()
 ```
+
+## Week 7 Assignment
+
+#### Instructions:
+- Choose a dataset in CSV format (for example, you can use datasets like the Iris dataset, a sales dataset, or any dataset of your choice).
+Load the dataset using pandas.
+Display the first few rows of the dataset using .head() to inspect the data.
+Explore the structure of the dataset by checking the data types and any missing values.
+Clean the dataset by either filling or dropping any missing values.
+- Task 2: Basic Data Analysis
+Compute the basic statistics of the numerical columns (e.g., mean, median, standard deviation) using .describe().
+Perform groupings on a categorical column (for example, species, region, or department) and compute the mean of a numerical column for each group.
+Identify any patterns or interesting findings from your analysis.
+- Task 3: Data Visualization
+Create at least four different types of visualizations:
+Line chart showing trends over time (for example, a time-series of sales data).
+Bar chart showing the comparison of a numerical value across categories (e.g., average petal length per species).
+Histogram of a numerical column to understand its distribution.
+Scatter plot to visualize the relationship between two numerical columns (e.g., sepal length vs. petal length).
+Customize your plots with titles, labels for axes, and legends where necessary.
+
+#### Assignment Solution
+- Using Iris dataset
+  ```
+  # Importing the library pandas
+
+import pandas as pd
+
+# Load the dataset using pandas:
+
+df = pd.read_csv('C:/Users/HP/Desktop/python classes/week 6/Iris.csv')
+
+# Display the first 10 rows of the dataset using .head():
+
+df.head(10)
+
+# Compute basic statistics of the numerical columns:
+
+df.describe(include='all')
+
+# # Fill missing values (if any)
+df = df.fillna(df.mode())
+
+# Perform groupings on a categorical column and compute the mean of a numerical column for each group:
+
+species_mean = df.groupby('Species').mean()
+print(species_mean)
+
+# DATA VISUALIZATION
+# importing the needed libraries
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+# pair chart showing the correction of the different species and their lengths
+
+sns.pairplot(df)
+```
+![output1](https://github.com/user-attachments/assets/deb3dfd8-51f5-4410-87b1-f7224b7a3c1a)
+- The pair plot displays histograms for individual variables on the diagonal and scatter plots for pairwise relationships between variables off-diagonally. It reveals the distribution of each variable and shows correlations, such as the strong positive correlation between PetalLengthCm and PetalWidthCm. This visual summary aids in understanding variable distributions and relationships, identifying correlations, and spotting outliers.
+##### ## Line chart showing trends over time:
+```
+# Line chart
+plt.figure(figsize=(10, 6))
+species_mean['SepalLengthCm'].plot(kind='line')
+plt.title('Mean Sepal Length per Species')
+plt.xlabel('Species')
+plt.ylabel('Mean Sepal Length')
+plt.show()
+```
+![output2](https://github.com/user-attachments/assets/b9778afc-3be6-4e1c-817f-4a479942447e)
+- A line chart titled "Mean Sepal Length per Species," showing the mean sepal length for three Iris species: Iris-setosa, Iris-versicolor, and Iris-virginica. The chart indicates a clear upward trend, with Iris-setosa having the shortest mean sepal length and Iris-virginica having the longest. This visualization highlights the differences in mean sepal length among the species, suggesting a progression in sepal length from Setosa to Virginica.
+
+```
+# Line chart
+plt.figure(figsize=(10, 6))
+species_mean['SepalWidthCm'].plot(kind='line')
+plt.title('Mean Sepal Width per Species')
+plt.xlabel('Species')
+plt.ylabel('Mean Sepal Length')
+plt.show()
+```
+![output3](https://github.com/user-attachments/assets/a924734d-134f-4c74-950c-34cfb3e3fc5b)
+- a line chart titled "Mean Sepal Length per Species," displaying the mean sepal length for the Iris species: Iris-setosa, Iris-versicolor, and Iris-virginica. In this chart, Iris-setosa has the highest mean sepal length, followed by a sharp decrease for Iris-versicolor, which has the lowest mean sepal length. Then, there is a slight increase for Iris-virginica. This visualization shows a notable drop in mean sepal length from Iris-setosa to Iris-versicolor, with Iris-virginica having an intermediate value.
+
+```
+# Line chart
+plt.figure(figsize=(10, 6))
+species_mean['PetalLengthCm'].plot(kind='line')
+plt.title('Mean Petal Length per Species')
+plt.xlabel('Species')
+plt.ylabel('Mean Petal Length')
+plt.show()
+```
+![output4](https://github.com/user-attachments/assets/a85552bf-0370-4a8a-b14c-1d5b039577fc)
+
+
+```
+# Line chart
+plt.figure(figsize=(10, 6))
+species_mean['PetalWidthCm'].plot(kind='line')
+plt.title('Mean Petal width per Species')
+plt.xlabel('Species')
+plt.ylabel('Mean Petal Width')
+plt.show()
+```
+![output5](https://github.com/user-attachments/assets/277f32cb-7b3f-4072-b83e-baff6751a554)
+
+
+##### Bar chart showing the comparison of a numerical value across categories:
+```
+plt.figure(figsize=(10,6))
+species_mean['SepalLengthCm'].plot(kind='bar')
+plt.title("Average Sepal Length per Species")
+plt.xlabel('Species')
+plt.ylabel('Average Sepal Length')
+```
+![output6](https://github.com/user-attachments/assets/2b1a6036-8af4-4d9c-bbc6-7692e2771243)
+
+```
+plt.figure(figsize=(10,6))
+species_mean['SepalWidthCm'].plot(kind='bar')
+plt.title("Average Sepal Width per Species")
+plt.xlabel('Species')
+plt.ylabel('Average Sepal Width')
+```
+
+
+```
+plt.figure(figsize=(10,6))
+species_mean['PetalWidthCm'].plot(kind='bar')
+plt.title("Average Petal Width per Species")
+plt.xlabel('Species')
+plt.ylabel('Average Petal Width')
+```
+
+```
+plt.figure(figsize=(10,6))
+species_mean['PetalLengthCm'].plot(kind='bar')
+plt.title("Average Petal Length per Species")
+plt.xlabel('Species')
+plt.ylabel('Average Petal Length')
+```
+##### ## Histogram of a numerical column:
+```
+plt.figure(figsize=(10,6))
+sns.histplot(df['Species'], kde=True)
+plt.title("Distribution of the Species")
+plt.xlabel("species")
+plt.ylabel("height")
+```
+##### ## Scatter plot to visualize the relationship between two numerical columns:
+
+```
+#  Scatter plot to visualize the relationship between two numerical columns (e.g., sepal length vs. petal length).
+
+plt.figure(figsize=(10,6))
+sns.scatterplot(x='SepalLengthCm', y='PetalLengthCm', hue='Species', data=df)
+plt.xlabel("Sepal Length")
+plt.ylabel("Petal Length")
+plt.title("Sepal length vs Petal")
+```
+
+
+
