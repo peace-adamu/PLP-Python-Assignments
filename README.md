@@ -372,6 +372,7 @@ plt.title("Average Sepal Width per Species")
 plt.xlabel('Species')
 plt.ylabel('Average Sepal Width')
 ```
+![output7](https://github.com/user-attachments/assets/0db4e4f5-6361-42d6-bb9c-fa6052fbc9c6)
 
 
 ```
@@ -381,6 +382,8 @@ plt.title("Average Petal Width per Species")
 plt.xlabel('Species')
 plt.ylabel('Average Petal Width')
 ```
+![output8](https://github.com/user-attachments/assets/18a4e966-5d11-42cc-a9a1-133c56307794)
+
 
 ```
 plt.figure(figsize=(10,6))
@@ -389,6 +392,9 @@ plt.title("Average Petal Length per Species")
 plt.xlabel('Species')
 plt.ylabel('Average Petal Length')
 ```
+![output9](https://github.com/user-attachments/assets/2ece7641-a012-4651-8154-99e1d3b2d37b)
+
+
 #####  Histogram of a numerical column:
 
 ```
