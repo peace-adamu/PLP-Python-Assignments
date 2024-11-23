@@ -264,7 +264,7 @@ Customize your plots with titles, labels for axes, and legends where necessary.
 
 #### Assignment Solution
 - Using Iris dataset
-  ```
+ ```
   # Importing the library pandas
 
 import pandas as pd
@@ -300,7 +300,7 @@ sns.pairplot(df)
 ```
 ![output1](https://github.com/user-attachments/assets/deb3dfd8-51f5-4410-87b1-f7224b7a3c1a)
 - The pair plot displays histograms for individual variables on the diagonal and scatter plots for pairwise relationships between variables off-diagonally. It reveals the distribution of each variable and shows correlations, such as the strong positive correlation between PetalLengthCm and PetalWidthCm. This visual summary aids in understanding variable distributions and relationships, identifying correlations, and spotting outliers.
-##### ## Line chart showing trends over time:
+###### Line chart showing trends over time:
 ```
 # Line chart
 plt.figure(figsize=(10, 6))
@@ -349,7 +349,7 @@ plt.show()
 ![output5](https://github.com/user-attachments/assets/277f32cb-7b3f-4072-b83e-baff6751a554)
 
 
-##### Bar chart showing the comparison of a numerical value across categories:
+###### Bar chart showing the comparison of a numerical value across categories:
 ```
 plt.figure(figsize=(10,6))
 species_mean['SepalLengthCm'].plot(kind='bar')
@@ -384,6 +384,7 @@ plt.xlabel('Species')
 plt.ylabel('Average Petal Length')
 ```
 ##### ## Histogram of a numerical column:
+
 ```
 plt.figure(figsize=(10,6))
 sns.histplot(df['Species'], kde=True)
