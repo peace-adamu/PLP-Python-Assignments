@@ -392,6 +392,7 @@ plt.title("Distribution of the Species")
 plt.xlabel("species")
 plt.ylabel("height")
 ```
+
 ##### ## Scatter plot to visualize the relationship between two numerical columns:
 
 ```
