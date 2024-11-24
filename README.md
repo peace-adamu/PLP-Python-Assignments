@@ -336,7 +336,6 @@ plt.show()
 ```
 ![output4](https://github.com/user-attachments/assets/a85552bf-0370-4a8a-b14c-1d5b039577fc)
 - This line plot shows the mean petal length for each Iris species:
-
 X-axis: Represents the three Iris species (Iris-setosa, Iris-versicolor, Iris-virginica).
 Y-axis: Displays the average petal length for each species.
 The plot reveals an increasing trend in mean petal length, with Iris-setosa having the smallest (around 1.5) and Iris-virginica the largest (around 5.5).
@@ -353,7 +352,7 @@ plt.ylabel('Mean Petal Width')
 plt.show()
 ```
 ![output5](https://github.com/user-attachments/assets/277f32cb-7b3f-4072-b83e-baff6751a554)
-
+- The line chart titled "Mean Petal Width per Species" shows the mean petal width for three Iris species: Iris-setosa, Iris-versicolor, and Iris-virginica. The chart reveals a clear upward trend in mean petal width from Iris-setosa, which has the smallest petal width, to Iris-virginica, which has the largest. This indicates a progressive increase in petal width across the species, with Iris-versicolor having an intermediate value. The pattern suggests a consistent differentiation in petal width among the three species.
 
 ###### Bar chart showing the comparison of a numerical value across categories:
 ```
@@ -364,6 +363,7 @@ plt.xlabel('Species')
 plt.ylabel('Average Sepal Length')
 ```
 ![output6](https://github.com/user-attachments/assets/2b1a6036-8af4-4d9c-bbc6-7692e2771243)
+- This bar chart compares the average sepal length among three Iris species: Iris-setosa, Iris-versicolor, and Iris-virginica. The chart shows that Iris-virginica has the highest average sepal length, followed by Iris-versicolor, and Iris-setosa has the shortest average sepal length. This indicates a trend where the average sepal length increases from Iris-setosa to Iris-virginica.
 
 ```
 plt.figure(figsize=(10,6))
@@ -373,7 +373,7 @@ plt.xlabel('Species')
 plt.ylabel('Average Sepal Width')
 ```
 ![output7](https://github.com/user-attachments/assets/0db4e4f5-6361-42d6-bb9c-fa6052fbc9c6)
-
+- This bar chart compares the average sepal width among the same three Iris species. Here, Iris-setosa has the highest average sepal width, while Iris-virginica and Iris-versicolor have relatively lower and similar sepal widths, with Iris-versicolor being slightly less than Iris-virginica. This suggests that Iris-setosa tends to have wider sepals compared to the other two species, contrasting with the trend seen in sepal length.
 
 ```
 plt.figure(figsize=(10,6))
@@ -383,6 +383,13 @@ plt.xlabel('Species')
 plt.ylabel('Average Petal Width')
 ```
 ![output8](https://github.com/user-attachments/assets/18a4e966-5d11-42cc-a9a1-133c56307794)
+- This bar chart represents the average petal length for each Iris species.
+
+Iris-setosa has the smallest average petal length, around 1.5, clearly distinct from the other two species.
+Iris-versicolor shows a moderate average petal length of approximately 4.
+Iris-virginica has the largest average petal length, exceeding 5.5.
+The increasing trend in petal length across species indicates a potential distinguishing feature for classification.
+This chart effectively highlights differences in petal length, aiding in species differentiation.
 
 
 ```
@@ -393,7 +400,12 @@ plt.xlabel('Species')
 plt.ylabel('Average Petal Length')
 ```
 ![output9](https://github.com/user-attachments/assets/2ece7641-a012-4651-8154-99e1d3b2d37b)
-
+- This bar chart represents the average petal length for each Iris species.
+Iris-setosa has the smallest average petal length, around 1.5, clearly distinct from the other two species.
+Iris-versicolor shows a moderate average petal length of approximately 4.
+Iris-virginica has the largest average petal length, exceeding 5.5.
+The increasing trend in petal length across species indicates a potential distinguishing feature for classification.
+This chart effectively highlights differences in petal length, aiding in species differentiation.
 
 #####  Histogram of a numerical column:
 
